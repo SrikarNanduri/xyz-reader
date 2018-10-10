@@ -18,12 +18,19 @@
 <resources>
     <color name="photo_placeholder">#ccc</color>
 
-    <color name="theme_primary">@color/blackRussian</color>
-    <color name="theme_primary_dark">@color/blackRussian</color>
-    <color name="theme_accent">#04561A</color>
+    <color name="theme_primary">@color/blue_grey</color>
+    <color name="theme_primary_dark">@color/blue_grey_dark</color>
+    <color name="theme_accent">@color/blue_grey_secondary</color>
     <color name="ltgray">#CDCDCD</color>
 
     <color name="black">#000</color>
+
+    <color name="blue_grey">#263238</color>
+    <color name="blue_grey_light">#4f5b62</color>
+    <color name="blue_grey_dark">#000a12</color>
+    <color name="blue_grey_secondary">#607d8b</color>
+    <color name="blue_grey_s_light">#8eacbb</color>
+    <color name="blue_grey_s_dark">#34515e</color>
 
     <color name="grey_400">#BDBDBD</color>
     <color name="teallight">#e0f2f1</color>
