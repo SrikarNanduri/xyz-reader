@@ -24,7 +24,6 @@
     </style>
     <style name="HeaderBar">
         <item name="android:background">#303F9F</item>
-        <item name="android:windowActivityTransitions" tools:targetApi="lollipop">true</item>
     </style>
 
     <style name="Theme.Bacon.Detail">
