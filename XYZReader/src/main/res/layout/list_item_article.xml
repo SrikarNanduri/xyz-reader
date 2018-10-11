@@ -12,6 +12,7 @@
     card_view:cardUseCompatPadding="true"
     card_view:cardBackgroundColor="@android:color/transparent"
     android:focusable="true"
+    app:elevation="8dp"
     android:foreground="?selectableItemBackground">
 
     <LinearLayout
