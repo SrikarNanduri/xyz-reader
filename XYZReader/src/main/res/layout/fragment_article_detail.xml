@@ -1,10 +1,10 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.ObservableScrollView
+    <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -91,18 +91,18 @@
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </FrameLayout>
-    </com.example.xyzreader.ui.ObservableScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
-    <ImageButton android:id="@+id/share_fab"
-        android:stateListAnimator="@anim/fab_state_list_anim"
-        android:background="@drawable/add_fab_background"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
         android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_share"
-        app:elevation="@dimen/fab_elevation"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
         android:contentDescription="@string/action_share" />
 
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+</android.support.design.widget.CoordinatorLayout>
