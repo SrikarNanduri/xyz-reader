@@ -84,6 +84,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingLeft="@dimen/list_side_margin"
+                    android:nestedScrollingEnabled="false"
+                    android:background="@android:color/transparent"
                     android:paddingRight="@dimen/list_side_margin" />
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>

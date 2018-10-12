@@ -93,6 +93,7 @@ public class ArticleDetailFragment extends Fragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
@@ -126,27 +127,9 @@ public class ArticleDetailFragment extends Fragment implements
                 mRootView.findViewById(R.id.draw_insets_frame_layout);
 
         mRecyclerBodytextView = (RecyclerView) mRootView.findViewById(R.id.recycler_bodytext);
-     /*    mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
-                mRootView.findViewById(R.id.draw_insets_frame_layout);
-      mDrawInsetsFrameLayout.setOnInsetsCallback(new DrawInsetsFrameLayout.OnInsetsCallback() {
-            @Override
-            public void onInsetsChanged(Rect insets) {
-                mTopInset = insets.top;
-            }
-        });*/
 
 
         mScrollView = (NestedScrollView) mRootView.findViewById(R.id.scrollview);
-      /*  mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
-        mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
-            @Override
-            public void onScrollChanged() {
-                mScrollY = mScrollView.getScrollY();
-                getActivityCast().onUpButtonFloorChanged(mItemId, ArticleDetailFragment.this);
-                mPhotoContainerView.setTranslationY((int) (mScrollY - mScrollY / PARALLAX_FACTOR));
-                updateStatusBar();
-            }
-        });*/
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
         mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
@@ -248,6 +231,8 @@ public class ArticleDetailFragment extends Fragment implements
 
             BodyTextAdapter adapter = new BodyTextAdapter(mCursor.getString(ArticleLoader.Query.BODY)
                     .split("(\n\r\n\r|\n\n)"));
+            mRecyclerBodytextView.setHasFixedSize(true);
+            mRecyclerBodytextView.setNestedScrollingEnabled(false);
             mRecyclerBodytextView.setAdapter(adapter);
             LinearLayoutManager llm = new LinearLayoutManager(getActivity());
             llm.setOrientation(LinearLayoutManager.VERTICAL);
