@@ -43,7 +43,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         mToolbar = (Toolbar) findViewById(R.id.details_tb);
         setSupportActionBar(mToolbar);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().getDecorView().setSystemUiVisibility(
